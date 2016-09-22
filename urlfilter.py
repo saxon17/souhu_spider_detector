@@ -10,12 +10,7 @@ SIMILAR_SET = set()
 REPEAT_SET = set()
 
 def urlformat(url):
-    '''
-    策略是构建一个三元组
-    第一项为url的netloc
-    第二项为path中每项的拆分长度
-    第三项为query的每个参数名称(参数按照字母顺序排序，避免由于顺序不同而导致的重复问题)
-    '''
+
     if urlparse.urlparse(url)[2] == '':
         url = url+'/'
 
